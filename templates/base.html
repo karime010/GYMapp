@@ -10,7 +10,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color:  #0e0c0d">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="#" style="color:white">VitaFit</a>
+            <a class="navbar-brand fw-bold" href="{{ url_for('index') }}"  style="color:white">VitaFit</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -49,7 +49,10 @@
   {% endblock %}
 </section>
 
-   
+<footer style="background-color: #000000; text-align: center; padding: 10px;">
+    <p style="color: darkgrey;">© 2026 Vitafit — Todos los derechos reservados</p>
+    <p>Hecho por Karime Cruz</p>
+</footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>
