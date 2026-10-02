@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block contenido %}
+
+<div class="container-fluid py-5" style="background: linear-gradient(to bottom, #fff, #ff6); min-height: 100vh;">
+
+    <div class="text-center mb-5">
+        <h1 class="mb-4"><strong>¡Hola! {{ usuario.nombre }} !!</strong></h1>
+        <h2><strong>¿Qué quieres hacer hoy?</strong></h2>
+    </div>
+
+    <div class="container overflow-hidden">
+        <div class="row justify-content-center">
+
+            <!-- Tarjeta 1 -->
+            <div class="col-md-6 col-lg-5 mb-4">
+                <div class="card shadow h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Mi Perfil</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col-md-6 col-lg-5 mb-4">
+                <div class="card shadow h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Mi Progreso</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="col-md-6 col-lg-5 mb-4">
+                <div class="card shadow h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Entrenamiento</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="col-md-6 col-lg-5 mb-4">
+                <div class="card shadow h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Nutricion</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 5 -->
+            <div class="col-md-6 col-lg-5 mb-4">
+                <div class="card shadow h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Calculadora IMC</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="/calculadoraIMC" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 6 -->
+            <div class="col-md-6 col-lg-5 mb-4">
+                <div class="card shadow h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Mis objetivos</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="/cerrarsesion" class="btn btn-dark">Cerrar sesión</a>
+    </div>
+
+</div>
+
+{% endblock %}
