@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block contenido %}
-<div class="container  justify-content-center align-items-center min-vh-100 d-flex">
+<div class="container  justify-content-center align-items-center min-vh-100 d-flex" style="background: linear-gradient(to bottom, #fff, #ff6 )">
     <div class="card shadow p-4" style="width: 400px;">
         <div class="text-center" >
             <h1 class="mb-4"><strong>Inicia sesion</strong></h1>
@@ -14,7 +14,8 @@
 
             <input type="password" name="password" class="form-control mb-3" placeholder="Contraseña" required>
             
-            <button type="submit" class="btn btn-primary w-100">Iniciar sesion</button>
+            <button type="submit" class="btn btn-primary w-100">Iniciar sesion</button><br><br>
+            <a href="/registro" class="btn btn-dark w-100">Aun no tienes una cuenta?</a><br><br>
             <a href="/recuperar" class="btn btn-link w-100">Olvidaste tu contraseña?</a>
         </form>
     </div>

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block contenido %}
+
+<h2 class="text-center mt-3">Calculadora IMC</h2>
+
+<div class="container p-3" style="background-color: #b8e994; border-radius: 10px;">
+    
+    <form method="POST" action="{{ url_for('calculadoraimc') }}">
+        
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">IMC</h5>
+                <p class="card-text">
+                    El IMC, o Índice de Masa Corporal, es una medida que relaciona el peso de una persona
+                    en kilogramos con su estatura en metros al cuadrado, y sirve como un método sencillo
+                    para evaluar si una persona tiene un peso saludable, sobrepeso u obesidad.
+                </p>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="peso" class="form-label">Peso (kg)</label>
+            <input type="number" name="peso" step="0.1" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="altura" class="form-label">Altura (cm)</label>
+            <input type="number" step="0.01" name="altura" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Calcular</button>
+
+    </form>
+</div>
+
+{% if resultado %}
+    <div class="container  text-center mt-3">
+        <h3>Tu IMC es: {{ resultado }}</h3>
+
+        <img src="{{ url_for('static', filename=imagen) }}"
+
+             class="img-fluid"
+
+             style="max-width: 250px;">
+
+        <h4 class="mt-3">Recomendación</h4>
+
+        <p>{{ recomendacion }}</p>
+    </div>
+{% endif %}
+
+{% endblock %}

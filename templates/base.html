@@ -21,13 +21,14 @@
                       <li><a class="dropdown-item" href="/login">Inicia sesion</a></li>
                         {% if session.get("usuario_id") %}
 
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:white">
                         Menu
                         </a>
                     
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Alientacion</a></li>
-                            <li><a class="dropdown-item" href="#">Tipo de ejercicio</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('evaluacion') }}">Evaluacion</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('contactos') }}">Contactos</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('paginaprincipal') }}">Pagina Principal</a></li>
                         </ul>
                         {% endif %}
                     </li>
