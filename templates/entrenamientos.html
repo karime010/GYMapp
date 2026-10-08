@@ -1,0 +1,259 @@
+{% extends "base.html" %} 
+{% block contenido %} 
+
+<h2 class="text-center mb-2">Entrenamientos VitaFit</h2>
+<p class="text-center text-muted mb-4">
+    Elige una rutina de acuerdo con tus objetivos y necesidades.
+</p>
+
+
+<!-- GANAR FUERZA -->
+<div class="card mb-3">
+    <div class="card-header">
+        <button class="btn w-100 text-start"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#ganarFuerza">
+            <strong>💪 Ganar fuerza</strong>
+        </button>
+    </div>
+
+    <div id="ganarFuerza" class="collapse">
+        <div class="card-body">
+
+            <!-- RUTINA 1 -->
+            <div class="card mb-3" id="rutina-fuerza">
+                <div class="card-body">
+                    <h4>Rutina enfocada en fuerza</h4>
+                    <p>
+                        Entrenamiento enfocado en desarrollar fuerza
+                        mediante diferentes ejercicios.
+                    </p>
+
+                    <hr>
+
+                    <h5>Día 1</h5>
+                    <p>Ejercicios de fuerza para trabajar diferentes grupos musculares.</p>
+
+                    <h5>Día 2</h5>
+                    <p>Ejercicios de fuerza y recuperación.</p>
+
+                    <h5>Día 3</h5>
+                    <p>Ejercicios de fuerza para complementar el entrenamiento.</p>
+                </div>
+            </div>
+
+            <!-- RUTINA 2 -->
+            <div class="card" id="rutina-fuerza-acondicionamiento">
+                <div class="card-body">
+                    <h4>Rutina de fuerza y acondicionamiento</h4>
+                    <p>
+                        Combinación de ejercicios de fuerza y
+                        acondicionamiento físico.
+                    </p>
+
+                    <hr>
+
+                    <h5>Día 1</h5>
+                    <p>Ejercicios de fuerza.</p>
+
+                    <h5>Día 2</h5>
+                    <p>Ejercicios de acondicionamiento.</p>
+
+                    <h5>Día 3</h5>
+                    <p>Combinación de fuerza y acondicionamiento.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- MEJORAR CONDICIÓN -->
+<div class="card mb-3">
+    <div class="card-header">
+        <button class="btn w-100 text-start"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mejorarCondicion">
+            <strong>🏃 Mejorar condición física</strong>
+        </button>
+    </div>
+
+    <div id="mejorarCondicion" class="collapse">
+        <div class="card-body">
+
+            <!-- RUTINA 1 -->
+            <div class="card mb-3" id="rutina-acondicionamiento">
+                <div class="card-body">
+                    <h4>Rutina de acondicionamiento físico</h4>
+                    <p>
+                        Ejercicios para mejorar la condición física
+                        y resistencia.
+                    </p>
+
+                    <hr>
+
+                    <h5>Día 1</h5>
+                    <p>Ejercicios de acondicionamiento.</p>
+
+                    <h5>Día 2</h5>
+                    <p>Ejercicios cardiovasculares.</p>
+
+                    <h5>Día 3</h5>
+                    <p>Ejercicios de acondicionamiento general.</p>
+                </div>
+            </div>
+
+            <!-- RUTINA 2 -->
+            <div class="card" id="rutina-cardio-fuerza">
+                <div class="card-body">
+                    <h4>Rutina combinada de cardio y fuerza</h4>
+                    <p>
+                        Combinación de ejercicios cardiovasculares
+                        y de fuerza.
+                    </p>
+
+                    <hr>
+
+                    <h5>Día 1</h5>
+                    <p>Cardio y ejercicios de fuerza.</p>
+
+                    <h5>Día 2</h5>
+                    <p>Cardio y ejercicios complementarios.</p>
+
+                    <h5>Día 3</h5>
+                    <p>Combinación de cardio y fuerza.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- GANAR MÚSCULO -->
+<div class="card mb-3">
+    <div class="card-header">
+        <button class="btn w-100 text-start"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#ganarMusculo">
+            <strong>🏋️ Ganar músculo</strong>
+        </button>
+    </div>
+
+    <div id="ganarMusculo" class="collapse">
+        <div class="card-body">
+
+            <div class="card mb-3" id="rutina-entrenamiento-fuerza">
+                <div class="card-body">
+                    <h4>Rutina de entrenamiento de fuerza</h4>
+                    <p>
+                        Entrenamiento enfocado en ejercicios de fuerza
+                        para trabajar diferentes grupos musculares.
+                    </p>
+
+                    <hr>
+
+                    <h5>Día 1</h5>
+                    <p>Ejercicios de fuerza.</p>
+
+                    <h5>Día 2</h5>
+                    <p>Ejercicios para diferentes grupos musculares.</p>
+
+                    <h5>Día 3</h5>
+                    <p>Ejercicios de fuerza.</p>
+                </div>
+            </div>
+
+            <!-- RUTINA 2 -->
+            <div class="card" id="rutina-fuerza-complementarios">
+                <div class="card-body">
+                    <h4>Rutina de fuerza con ejercicios complementarios</h4>
+                    <p>
+                        Rutina de fuerza acompañada de ejercicios
+                        complementarios.
+                    </p>
+
+                    <hr>
+
+                    <h5>Día 1</h5>
+                    <p>Ejercicios principales de fuerza.</p>
+
+                    <h5>Día 2</h5>
+                    <p>Ejercicios complementarios.</p>
+
+                    <h5>Día 3</h5>
+                    <p>Combinación de ejercicios principales y complementarios.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- ACONDICIONAMIENTO GENERAL -->
+<div class="card mb-3">
+    <div class="card-header">
+        <button class="btn w-100 text-start"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#acondicionamientoGeneral">
+            <strong>🧘 Acondicionamiento general</strong>
+        </button>
+    </div>
+
+    <div id="acondicionamientoGeneral" class="collapse">
+        <div class="card-body">
+
+            <!-- RUTINA 1 -->
+            <div class="card mb-3" id="rutina-acondicionamiento-general">
+                <div class="card-body">
+                    <h4>Rutina general de acondicionamiento</h4>
+                    <p>
+                        Ejercicios variados para trabajar el
+                        acondicionamiento general.
+                    </p>
+
+                    <hr>
+
+                    <h5>Día 1</h5>
+                    <p>Ejercicios de acondicionamiento general.</p>
+
+                    <h5>Día 2</h5>
+                    <p>Ejercicios cardiovasculares.</p>
+
+                    <h5>Día 3</h5>
+                    <p>Ejercicios de movilidad y acondicionamiento.</p>
+                </div>
+            </div>
+
+            <!-- RUTINA 2 -->
+            <div class="card" id="rutina-fuerza-movilidad">
+                <div class="card-body">
+                    <h3>Rutina combinada de fuerza y movilidad</h3>
+                    <p>
+                        Combinación de ejercicios de fuerza y movilidad.
+                    </p>
+
+                    <hr>
+
+                    <h5>Día 1</h5>
+                    <p>Ejercicios de fuerza.</p>
+
+                    <h5>Día 2</h5>
+                    <p>Ejercicios de movilidad.</p>
+
+                    <h5>Día 3</h5>
+                    <p>Combinación de fuerza y movilidad.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

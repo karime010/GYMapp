@@ -199,5 +199,15 @@ def calculadoraimc():
 def contactos():
     return render_template("contactos.html")
 
+
+@app.route("/entrenamientos")
+def entrenamientos():
+    return render_template("entrenamientos.html")
+
+
+@app.route("/nutricion")
+def nutricion():
+    return render_template("nutricion.html")
+
 if __name__ == "__main__": 
     app.run(debug=True) 
