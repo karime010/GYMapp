@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block contenido %}
 
-<div class="container-fluid py-5" style="background: linear-gradient(to bottom, #fff, #ff6); min-height: 100vh;">
+<div class="container-fluid py-5" style="background: linear-gradient(to bottom, #fff, rgb(15, 15, 13)); min-height: 100vh;">
 
     <div class="text-center mb-5">
         <h1 class="mb-4"><strong>¡Hola! {{ usuario.nombre }} !!</strong></h1>
@@ -17,8 +17,20 @@
                     <img src="static/blank-profile-picture-973460_1280.png" class="card-img-top" alt="imagen de perfil">
                     <div class="card-body">
                         <h5 class="card-title">Mi Perfil</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">Tu informacion personal y preferencias.</p>
+                        <a href="/miperfil" class="btn btn-primary">Ir a mi perfil</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col-md-6 col-lg-5 mb-4">
+                <div class="card shadow h-100">
+                    <img src="static/OIP (5).webp" class="card-img-top" alt="imagen de evaluacion">
+                    <div class="card-body">
+                        <h5 class="card-title">Evaluacion</h5>
+                        <p class="card-text">Realiza una evaluacion de tu estado de salud y fitness.</p>
+                        <a href="/evaluacion" class="btn btn-primary">Ir a mi evaluacion</a>
                     </div>
                 </div>
             </div>
@@ -29,8 +41,8 @@
                     <img src="static/OIP (3).webp" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Mi Progreso</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">Sigue tu evolución y alcanza tus objetivos de fitness.</p>
+                        <a href="/mi-progreso" class="btn btn-primary">Ir a mi progreso</a>
                     </div>
                 </div>
             </div>
@@ -41,8 +53,8 @@
                     <img src="static/weightlifting-icon-illustration-can-be-260nw-2356939035 (1).webp" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Entrenamientos</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        <a href="/entrenamientos" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">Planifica y lleva un registro de tus sesiones de entrenamiento.</p>
+                        <a href="/entrenamientos" class="btn btn-primary">Ir a entrenamientos</a>
                     </div>
                 </div>
             </div>
@@ -53,8 +65,8 @@
                     <img src="static/OIP (4).webp" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Nutricion</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        <a href="/nutricion" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">Descubre consejos nutricionales para mejorar tu salud y bienestar.</p>
+                        <a href="/nutricion" class="btn btn-primary">Ir a nutrición</a>
                     </div>
                 </div>
             </div>
@@ -65,8 +77,8 @@
                     <img src="static/unnamed.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Calculadora IMC</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        <a href="/calculadoraIMC" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">Calcula tu Índice de Masa Corporal (IMC) y evalúa tu estado de salud.</p>
+                        <a href="/calculadoraIMC" class="btn btn-primary">Ir a calculadora IMC</a>
                     </div>
                 </div>
             </div>
@@ -77,8 +89,8 @@
                     <img src="static/clear-goals-rgb-color-icon-set-realistic-and-unambiguous-aim-reach-goal-step-by-step-within-timeline-aim-accomplishment-isolated-illustration-simple-filled-line-drawing-vector.webp" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Consejos y ábitos</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        <a href="/consejos" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">Descubre consejos para desarrollar hábitos saludables y mejorar tu calidad de vida.</p>
+                        <a href="/consejos" class="btn btn-primary">Ir a consejos</a>
                     </div>
                 </div>
             </div>

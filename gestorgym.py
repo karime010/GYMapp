@@ -130,6 +130,31 @@ class GestorGYM:
 
             return None
 
+    def actualizar_foto(self, usuario_id: str, foto: str) -> bool:
+
+        try:
+
+            resultado = self.usuarios.update_one(
+
+                {
+                    "_id": ObjectId(usuario_id)
+                },
+
+                {
+                    "$set": {
+                        "foto": foto
+                    }
+                }
+            )
+
+            return resultado.matched_count > 0
+
+        except Exception as e:
+
+            print(f"❌ Error al actualizar foto: {e}")
+
+            return False    
+
     def iniciar_sesion(
         self,
         email: str,

@@ -1,6 +1,8 @@
 {% extends "base.html" %} 
 {% block contenido %} 
 
+<link rel="stylesheet" href="{{ url_for('static', filename='planes.css') }}">
+
 <h1 class="text-center"><strong>Bienvenido a VitaFit</strong></h1> 
 
 <p class="text-center">
@@ -59,7 +61,7 @@ Conoce tu progreso, establece tus objetivos y trabaja en tu bienestar con VitaFi
             </div>
         </div>
     </div>
-</div>
+</div><br><br>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
 {% endblock %}

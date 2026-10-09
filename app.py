@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session 
 from gestorgym import GestorGYM 
 import bcrypt
+import os
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 app.secret_key = "tu_clave_secreta"
@@ -208,6 +210,57 @@ def entrenamientos():
 @app.route("/nutricion")
 def nutricion():
     return render_template("nutricion.html")
+
+@app.route("/miperfil")
+def miperfil():
+    usuario = gestor.obtener_usuario(session["usuario_id"])
+    evaluacion = gestor.obtener_evaluacion(session["usuario_id"])
+    return render_template("miperfil.html", usuario=usuario, evaluacion=evaluacion)
+
+
+@app.route("/editar_foto", methods=["POST"])
+def editar_foto():
+
+    if not session.get("usuario_id"):
+        return redirect(url_for("login"))
+
+    archivo = request.files.get("foto")
+
+    if not archivo or archivo.filename == "":
+        flash("Selecciona una imagen.", "warning")
+        return redirect(url_for("miperfil"))
+
+    extension = archivo.filename.rsplit(".", 1)[-1].lower()
+
+    if "." not in archivo.filename or extension not in ["jpg", "jpeg", "png", "webp"]:
+        flash("Elige una imagen JPG, PNG o WEBP.", "danger")
+        return redirect(url_for("miperfil"))
+
+    usuario_id = session["usuario_id"]
+
+    nombre_foto = f"foto_{usuario_id}.{extension}"
+
+    carpeta = os.path.join(app.static_folder, "perfiles")
+    os.makedirs(carpeta, exist_ok=True)
+
+    ruta = os.path.join(carpeta, secure_filename(nombre_foto))
+
+    archivo.save(ruta)
+
+    foto = f"perfiles/{nombre_foto}"
+
+    if gestor.actualizar_foto(usuario_id, foto):
+        flash("Foto de perfil actualizada.", "success")
+    else:
+        os.remove(ruta)
+        flash("No se pudo actualizar la foto.", "danger")
+
+    return redirect(url_for("miperfil"))
+
+@app.route("/editar_preferencias")
+def editar_preferencias():
+    usuario = gestor.obtener_usuario(session["usuario_id"])
+    return render_template("editar_preferencias.html", usuario=usuario)
 
 if __name__ == "__main__": 
     app.run(debug=True) 
