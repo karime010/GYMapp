@@ -1,0 +1,56 @@
+{% extends "base.html" %} 
+{% block contenido %} 
+
+<div class="container mt-4">
+
+    <div class="text-center mb-4">
+
+        <div class="mb-3">
+            <img src="{{ url_for('static', filename=usuario.foto or 'perfil.png') }}"
+            alt="Foto de perfil"
+            class="rounded-circle"
+            width="150"
+            height="150">
+        </div>
+
+        <h3><strong>{{ usuario.nombre }}</strong></h3>
+
+        <p class="text-muted"><em>{{ usuario.correo }}</em></p>
+
+    </div>
+
+</div>
+
+<form action="{{ url_for('editar_foto') }}"
+      method="POST"
+      enctype="multipart/form-data">
+
+    <label for="foto" class="btn btn-link">
+        Editar foto de perfil
+    </label>
+
+    <input type="file"
+           id="foto"
+           name="foto"
+           accept="image/*"
+           class="d-none">
+
+    <button type="submit" class="btn btn-outline-secondary btn-sm">
+        Guardar foto
+    </button>
+
+</form>
+
+<hr>
+<h2><strong><em>Información Personal</em></strong></h2>
+<p><strong>Edad:</strong> {{ evaluacion.edad }}</p>
+<p><strong>Altura:</strong> {{ evaluacion.altura }} cm</p>
+<p><strong>Peso:</strong> {{ evaluacion.peso }} kg</p>
+<hr>
+<h2><strong><em>Preferencias</em></strong></h2>
+<p><strong>Objetivo:</strong> {{ evaluacion.objetivo }}</p>
+<p><strong>Dias de entrenamiento:</strong> {{ evaluacion.dias_entrenamiento }}</p>
+<a href="{{url_for('editar_preferencias')}}" class="btn btn-outline-primary">Editar Preferencias</a>
+
+
+{% endblock %}
